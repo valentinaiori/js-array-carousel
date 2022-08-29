@@ -9,3 +9,46 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+#carousel{
+    height: 50vh;
+    position: relative;
+}
+
+.item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    display: none;
+   
+}
+
+.item.active{
+    display: inline-block;
+}
+
+#carousel-navigator{
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+}
+
+#carousel-navigator button{
+    font-size: 30px;
+    
+}
+
+#carousel-navigator button:hover{
+    background-color: green;
+}
