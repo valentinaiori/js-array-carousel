@@ -59,6 +59,11 @@ nextButton.addEventListener('click',
         if(nextElement){
             activeItem.classList.remove('active')
             nextElement.classList.add('active');
+        } else{
+            activeItem.classList.remove('active')
+            firstItem.classList.add('active')
+
+            
         }
            
     }       
@@ -76,7 +81,13 @@ previousButton.addEventListener('click',
         if(previousElement){
             activeItem.classList.remove('active')
             previousElement.classList.add('active');
+        } else{
+            activeItem.classList.remove('active')
+            const items = document.querySelectorAll('.item')
+            
+            const lastItem = items[items.length -1]
+            
+            lastItem.classList.add('active')
         }
-           
     }       
 );
